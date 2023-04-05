@@ -1,4 +1,9 @@
+from appium.webdriver.common.appiumby import AppiumBy
 
 
 class WelcomeLocators:
-    pass
+    ENTER_BUTTON: tuple = (
+        AppiumBy.ACCESSIBILITY_ID, "ENTER"
+    )
+
+

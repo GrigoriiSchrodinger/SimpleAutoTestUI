@@ -1,2 +1,3 @@
 # В будущем здесь что то будет
 # TODO: Добавить requirements
+Appium-Python-Client~=2.9.0
