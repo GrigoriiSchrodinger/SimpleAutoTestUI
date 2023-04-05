@@ -1,0 +1,4 @@
+
+
+class WelcomeLocators:
+    pass
