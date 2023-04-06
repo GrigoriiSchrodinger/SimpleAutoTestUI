@@ -2,22 +2,17 @@ import unittest
 
 from appium import webdriver
 from src.page.NewTaskPage import NewTaskPage
+from src.utils.config import DESIRED_CAPABILITIES, APPIUM_URL
 
 
-class TestsApp(unittest.TestCase):
-    URL = "http://127.0.0.1:4723"
-
+class TestsCreateTask(unittest.TestCase):
     def setUp(self) -> None:
-        desired_capabilities = {
-            "platformName": "Android",
-            "platformVersion": "13",
-            "deviceName": "Pixel 6 Pro",
-            "automationName": "uiautomator2",
-            "app": "/Users/schrodinger/main/SimpleAutoTestUI/src/TODO.apk",
-        }
-        self.driver = webdriver.Remote(command_executor=self.URL, desired_capabilities=desired_capabilities)
+        self.driver = webdriver.Remote(
+            command_executor=APPIUM_URL,
+            desired_capabilities=DESIRED_CAPABILITIES
+        )
 
-    def test_one(self) -> None:
+    def test_open_new_task(self) -> None:
         page = NewTaskPage(self.driver)
         page.open_page_new_task()
 
