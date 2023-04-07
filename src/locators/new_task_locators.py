@@ -12,7 +12,7 @@ class NewTaskLocators:
                         "androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/"
                         "android.widget.ScrollView/android.widget.EditText[1]"
     )
-    FIELD_DESCRIPRION_TASK: tuple = (
+    FIELD_DESCRIPTION_TASK: tuple = (
         AppiumBy.XPATH, "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/"
                         "androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.widget."
                         "ScrollView/android.widget.EditText[2]"

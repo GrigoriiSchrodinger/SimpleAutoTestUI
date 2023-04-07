@@ -29,13 +29,13 @@ class TestsCreateTask(unittest.TestCase):
         page.new_task_open_page()
 
         page.new_task_send_name_task(name="hello")
-        page.new_task_send_description_task(descriprion="world")
+        page.new_task_send_description_task(description="world")
         page.new_task_click_save_task()
 
         self.assertEqual(page.list_task_return_text_notice_add_task(), "Task added")
 
     def test_creation_without_description_case_03(self):
-        """Проверяем что задача не может создавться без описания"""
+        """Проверяем что задача не может создаваться без описания"""
         page = NewTaskPage(self.driver)
         page.new_task_open_page()
 
@@ -45,11 +45,11 @@ class TestsCreateTask(unittest.TestCase):
         self.assertEqual(page.new_task_return_text_notice_warning(), "Tasks cannot be empty")
 
     def test_creation_without_name_case_04(self):
-        """Проверяем что задача не может создавться без названия"""
+        """Проверяем что задача не может создаваться без названия"""
         page = NewTaskPage(self.driver)
         page.new_task_open_page()
 
-        page.new_task_send_description_task(descriprion="world")
+        page.new_task_send_description_task(description="world")
         page.new_task_click_save_task()
 
         self.assertEqual(page.new_task_return_text_notice_warning(), "Tasks cannot be empty")

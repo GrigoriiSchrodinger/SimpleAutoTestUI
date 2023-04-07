@@ -19,8 +19,8 @@ class NewTaskPage(ListTaskPage):
     def new_task_send_name_task(self, name: str) -> None:
         self.send_text(locator=NewTaskLocators.FIELD_NAME_TASK, text=name)
 
-    def new_task_send_description_task(self, descriprion: str) -> None:
-        self.send_text(locator=NewTaskLocators.FIELD_DESCRIPRION_TASK, text=descriprion)
+    def new_task_send_description_task(self, description: str) -> None:
+        self.send_text(locator=NewTaskLocators.FIELD_DESCRIPTION_TASK, text=description)
 
     def new_task_click_save_task(self) -> None:
         self.click(locator=NewTaskLocators.BUTTON_SAVE_TASK)
