@@ -1,3 +1,7 @@
+<div align="center">
+    <img src="asset/logo_appium.png">
+</div>
+
 ```
 SimpleAutoTestUI/
 ├── src/
