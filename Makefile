@@ -8,9 +8,8 @@ start:
         echo "APPIUM_PORT=4723" >> .env; \
         echo "" >> .env; \
         echo "# device settings" >> .env; \
-        echo "OS=!!!!" >> .env; \
-        echo "VERSION=!!!!" >> .env; \
-        echo "NAME_DEVICE=!!!!" >> .env; \
+        echo "VERSION=Версия_устройства" >> .env; \
+        echo "NAME_DEVICE='Название вашего устройства'" >> .env; \
         CREATED=true; \
     fi >/dev/null; \
     if [ "$$CREATED" = true ]; then \
