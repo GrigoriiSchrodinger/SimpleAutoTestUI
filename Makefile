@@ -4,7 +4,7 @@ start:
         echo "File .env already exists"; \
     else \
         echo "# appium server settings" > .env; \
-       echo "APPIUM_HOST=127.0.0.1" >> .env; \
+        echo "APPIUM_HOST=127.0.0.1" >> .env; \
         echo "APPIUM_PORT=4723" >> .env; \
         echo "" >> .env; \
         echo "# device settings" >> .env; \
