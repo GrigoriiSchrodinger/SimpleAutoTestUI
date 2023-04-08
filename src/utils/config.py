@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-with open('settings.json') as settings:
+with open('src/utils/settings.json') as settings:
     settings = json.load(settings)
 
 # appium server settings

@@ -1,6 +1,7 @@
 import unittest
 
 from appium import webdriver
+from appium.webdriver.appium_service import AppiumService
 
 from src.page.new_task_page import NewTaskPage
 from src.utils.config import DESIRED_CAPABILITIES, APPIUM_URL
@@ -8,6 +9,8 @@ from src.utils.config import DESIRED_CAPABILITIES, APPIUM_URL
 
 class TestNewTaskCreation(unittest.TestCase):
     def setUp(self) -> None:
+        self.appium_server = AppiumService()
+        self.appium_server.start()
         self.driver = webdriver.Remote(
             command_executor=APPIUM_URL,
             desired_capabilities=DESIRED_CAPABILITIES
@@ -53,3 +56,4 @@ class TestNewTaskCreation(unittest.TestCase):
 
     def tearDown(self) -> None:
         self.driver.quit()
+        self.appium_server.stop()

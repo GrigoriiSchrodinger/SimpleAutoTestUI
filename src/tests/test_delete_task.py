@@ -1,6 +1,7 @@
 import unittest
 
 from appium import webdriver
+from appium.webdriver.appium_service import AppiumService
 
 from src.page.list_task_page import ListTaskPage
 from src.page.task_menu_page import MenuTask
@@ -9,6 +10,8 @@ from src.utils.config import APPIUM_URL, DESIRED_CAPABILITIES
 
 class TestDeleteTask(unittest.TestCase):
     def setUp(self):
+        self.appium_server = AppiumService()
+        self.appium_server.start()
         self.driver = webdriver.Remote(
             command_executor=APPIUM_URL,
             desired_capabilities=DESIRED_CAPABILITIES
@@ -30,3 +33,4 @@ class TestDeleteTask(unittest.TestCase):
 
     def tearDown(self) -> None:
         self.driver.quit()
+        self.appium_server.stop()
