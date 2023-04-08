@@ -1,5 +1,12 @@
 start:
 	@CREATED=false; \
+    if [ -e src/utils/settings.json ]; then \
+        echo "File src/utils/settings.json already exists"; \
+    else \
+        echo '{"path_app": "$(PWD)/src/TODO.apk"}' > src/utils/settings.json; \
+        CREATED=true; \
+    fi >/dev/null; \
+    CREATED=false; \
     if [ -e .env ]; then \
         echo "File .env already exists"; \
     else \
@@ -13,5 +20,5 @@ start:
         CREATED=true; \
     fi >/dev/null; \
     if [ "$$CREATED" = true ]; then \
-        echo "\033[0;33mВнимание! был создан .env файл. Заполните его пожалуйста перед запускам тестов\033[0m"; \
+        echo "\033[0;33mВнимание! был создан .env файл. Заполните его пожалуйста перед запуском тестов\033[0m"; \
     fi
