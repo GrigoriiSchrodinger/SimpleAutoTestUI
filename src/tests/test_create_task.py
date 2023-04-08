@@ -1,12 +1,9 @@
-import logging
 import unittest
 
 from appium import webdriver
 
 from src.page.new_task_page import NewTaskPage
 from src.utils.config import DESIRED_CAPABILITIES, APPIUM_URL
-
-logger = logging.getLogger("root")
 
 
 class TestNewTaskCreation(unittest.TestCase):
