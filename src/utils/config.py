@@ -16,7 +16,7 @@ DESIRED_CAPABILITIES = dict(
     platformVersion=os.environ.get("VERSION"),
     deviceName=os.environ.get("NAME_DEVICE"),
     automationName=os.environ.get("AUTOMATION_NAME", "uiautomator2"),
-    app=os.path.join(current_dir, 'src', 'TODO.apk'),
+    app="/Users/schrodinger/main/SimpleAutoTestUI/src/TODO.apk",
 )
 # appium driver settings
 IMPLICIT_WAIT = 30
