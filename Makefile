@@ -22,3 +22,6 @@ start:
     if [ "$$CREATED" = true ]; then \
         echo "\033[0;33mВнимание! был создан .env файл. Заполните его пожалуйста перед запуском тестов\033[0m"; \
     fi
+
+run:
+	@(source venv/bin/activate && python3 main.py)

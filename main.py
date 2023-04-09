@@ -8,8 +8,7 @@ logger = logger.setup_custom_logger('root')
 
 if __name__ == '__main__':
     warnings.filterwarnings("ignore")
-
-    logger.info(logo)
+    print(logo)
     test_loader = unittest.TestLoader()
     test_suite = test_loader.discover('src/tests')
     runner = unittest.TextTestRunner()

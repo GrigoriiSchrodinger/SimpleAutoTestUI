@@ -9,6 +9,6 @@ def setup_custom_logger(name) -> Logger:
     handler.setFormatter(formatter)
 
     logger = logging.getLogger(name)
-    logger.setLevel(logging.INFO)
+    logger.setLevel(logging.ERROR)
     logger.addHandler(handler)
     return logger
