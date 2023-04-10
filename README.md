@@ -4,7 +4,7 @@
 
 ---
 
-<h1 align="center"> Appium </h1>
+<h1 align="center"> Appium UI auto-test </h1>
 
 Пример того, как можно автоматизировать тестирование мобильных устройств на Python при помощи фреймворка 
 [Appium](https://github.com/appium/appium).
