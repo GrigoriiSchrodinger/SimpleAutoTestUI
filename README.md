@@ -15,7 +15,15 @@
 
 <h1 align="center">Запуск</h1>
 
-Сначала запустите команду `make start`, чтобы создать файл `.env`, который необходимо заполнить, и файл `settings.json`.
+Для начала устанавливаем зависимости: 
+* [Appium-Python-Client](https://pypi.org/project/Appium-Python-Client/)
+* [python-dotenv](https://pypi.org/project/python-dotenv/)
+
+```
+pip install -r requirements.txt
+```
+
+Запускаем команду `make start`, чтобы создать файл `.env`, который необходимо заполнить, и файл `settings.json`.
 
 ```
 make start
