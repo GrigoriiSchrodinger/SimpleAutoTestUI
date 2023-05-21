@@ -6,16 +6,16 @@
 
 <h1 align="center"> Appium UI auto-test </h1>
 
-Пример того, как можно автоматизировать тестирование мобильных устройств на Python при помощи фреймворка 
+An example of how you can automate mobile device testing in Python using a framework
 [Appium](https://github.com/appium/appium).
-В качестве тестового приложения используется пример приложения 
-[todo](https://github.com/android/architecture-samples), доступный GitHub.
+The sample app is being used as a test app
+[todo](https://github.com/android/architecture-samples) is available on GitHub.
 
 ---
 
-<h1 align="center">Запуск</h1>
+<h1 align="center">Launch</h1>
 
-Для начала устанавливаем зависимости: 
+First, install the dependencies:
 * [Appium-Python-Client](https://pypi.org/project/Appium-Python-Client/)
 * [python-dotenv](https://pypi.org/project/python-dotenv/)
 
@@ -23,17 +23,17 @@
 pip install -r requirements.txt
 ```
 
-Запускаем команду `make start`, чтобы создать файл `.env`, который необходимо заполнить, и файл `settings.json`.
+We run the `make start` command to create the `.env` file that needs to be populated and the `settings.json` file.
 
 ```
 make start
 ```
 
-Запустите тесты следующей командой:
+Run the tests with the following command:
 ```
 python3 main.py
 ```
-Также можно запустить тесты через команду `make run`
+You can also run tests with the `make run` command
 ```
 make run
 ```
@@ -41,7 +41,7 @@ make run
 
 ---
 
-<h1 align="center">Структура проекта </h1>
+<h1 align="center">Project structure</h1>
 
 ```
 SimpleAutoTestUI/
@@ -49,26 +49,26 @@ SimpleAutoTestUI/
 │   └── ...
 ├── src/
 │   ├── locators/
-│   │   └── страницы с локаторами 
+│   │   └── ... 
 │   ├── pages/
-│   │   └── страницы с экранами приложения 
+│   │   └── ...
 │   ├── tests/
-│   │   └── тесты 
+│   │   └── ... 
 │   └── utils/
-│       │── конфиги
-│       └── настройки
+│       │── ...
+│       └── ...
 └── main.py
 ```
 
 ## asset/
-Директория, в которой находятся ресурсы (например, изображения).
+The directory where the resources (such as images) are located.
 
 ## src/
-Директория, которая содержит исходный код вашего проекта. Она включает в себя несколько поддиректорий:
-1. **locators/** - В этой директории содержатся файлы с локаторами элементов интерфейса (например, идентификаторы, имена, пути).
-2. **pages/** - Эта директория содержит файлы, которые представляют каждый экран приложения.
-3. **tests/** - В этой директории содержатся тесты.
-4. **utils/** - Эта директория содержит вспомогательные файлы и модули.
+The directory that contains the project's source code. It includes several subdirectories:
+1. **locators/** - This directory contains files with interface element locators (for example, identifiers, names, paths).
+2. **pages/** - This directory contains files that represent each screen of the application.
+3. **tests/** - This directory contains tests.
+4. **utils/** - This directory contains auxiliary files and modules.
 
 ## main.py
-Основной файл проекта.
+main project file.
